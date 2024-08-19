@@ -1,13 +1,91 @@
 <main>
-    <div class="home-banner">
-        <h1>Bem-vindo à Empresa de Desenvolvimento XYZ</h1>
-        <p>Transformando ideias em realidade digital.</p>
-        <button mat-raised-button color="accent">Veja nossos projetos</button>
-      </div>
-      <mat-grid-list cols="3" rowHeight="2:1">
-        <mat-grid-tile *ngFor="let service of services">
-          <mat-card>{{ service.nome }}</mat-card>
-        </mat-grid-tile>
-      </mat-grid-list>
+  <section id="cabecalho">
+    <mat-toolbar>
+      <img src="logo.png" alt="logo" class="logo">
+      <span class="spacer"></span>
+      <nav class="nav-bar">
+        <button
+          mat-button
+          *ngFor="let item of menuItems"
+          (click)="scrollToSection(item.link)"
+        >
+          {{ item.label }}
+        </button>
+      </nav>
+    </mat-toolbar>
+  </section>
+
+  <section id="sobre">
+    <h2>Sobre Nós</h2>
+    <p>
+      Somos uma empresa dedicada a transformar ideias inovadoras em soluções
+      digitais robustas e escaláveis. Com uma equipe altamente qualificada de
+      desenvolvedores, designers e especialistas em tecnologia, oferecemos um
+      conjunto completo de serviços de desenvolvimento de software
+      personalizados para atender às necessidades específicas de nossos
+      clientes.
+    </p>
+    <p>
+      Desde o planejamento estratégico até a implementação e suporte contínuo,
+      nos especializamos em criar aplicações web, móveis e sistemas corporativos
+      que ajudam as empresas a atingir seus objetivos de negócios. Nossa
+      abordagem colaborativa garante que cada projeto seja concluído no prazo,
+      dentro do orçamento e com o mais alto padrão de qualidade.
+    </p>
+    <p>
+      Com anos de experiência no mercado, já ajudamos diversas empresas a
+      aprimorar seus processos operacionais e a alcançar novos patamares de
+      eficiência e inovação. Nosso compromisso com a excelência técnica e a
+      satisfação do cliente nos torna um parceiro de confiança para empresas que
+      buscam evoluir na era digital.
+    </p>
+    <p>
+      Venha nos conhecer melhor e descobrir como podemos contribuir para o
+      sucesso do seu próximo projeto.
+    </p>
+  </section>
+
+  <section id="servicos">
+        <mat-card class="example-card" appearance="outlined" *ngFor="let item of services">
+          <mat-card-header>
+            <mat-card-title-group>
+              <mat-card-title>{{item.nome}}</mat-card-title>
+              <img
+                mat-card-sm-image
+                src="{{item.imagem}}"
+                alt="{{item.nome}}"
+              />
+            </mat-card-title-group>
+          </mat-card-header>
+          <mat-card-content>
+            {{ item.texto }}
+          </mat-card-content>
+        </mat-card>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <p>Endereço: Rua 123, 456, Cidade, Estado - CEP 12345-678</p>
+    <p>Telefone: (11) 9999-9999</p>
+    <p>Email: info&#64;empresa.com</p>
+  </section>
+
+  <section id="footer">
+    <mat-toolbar color="primary">
+      <span
+        >&copy; 2024 Empresa de Desenvolvimento XYZ. Todos os direitos
+        reservados.</span
+      >
+      <span class="spacer"></span>
+      <a mat-icon-button href="https://facebook.com"
+        ><mat-icon>facebook</mat-icon></a
+      >
+      <a mat-icon-button href="https://twitter.com"
+        ><mat-icon>twitter</mat-icon></a
+      >
+      <a mat-icon-button href="https://linkedin.com"
+        ><mat-icon>linkedin</mat-icon></a
+      >
+    </mat-toolbar>
+  </section>
 </main>
-  

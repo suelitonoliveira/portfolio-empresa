@@ -1,4 +1,6 @@
 export interface Iservicos {
     id: number,
-    nome: string
+    nome: string,
+    texto: string,
+    imagem: string
 }
