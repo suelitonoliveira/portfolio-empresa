@@ -1,0 +1,15 @@
+<app-header></app-header>
+<main>
+    <div class="home-banner">
+        <h1>Bem-vindo à Empresa de Desenvolvimento XYZ</h1>
+        <p>Transformando ideias em realidade digital.</p>
+        <button mat-raised-button color="accent">Veja nossos projetos</button>
+      </div>
+      <mat-grid-list cols="3" rowHeight="2:1">
+        <mat-grid-tile *ngFor="let service of services">
+          <mat-card>{{ service.nome }}</mat-card>
+        </mat-grid-tile>
+      </mat-grid-list>
+</main>
+<app-footer></app-footer>
+  

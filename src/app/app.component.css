@@ -1,0 +1,13 @@
+main {
+    padding: 20px;
+  }
+  
+  app-header, app-footer {
+    display: block;
+  }
+  
+  app-footer {
+    margin-top: 20px;
+    background-color: #f1f1f1;
+  }
+  
